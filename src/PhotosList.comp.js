@@ -35,4 +35,23 @@ function PhotosList(props){
     )
 }
 
+export const add = (a,b) => {
+    return a+b;
+}
+export const getDataFromServer = ()=>{
+    const url_photos = 'uploads/data.json';
+    fetch( url_photos, { method: 'GET' } )
+    .then(result => {
+        result.json()
+        .then(resultData=>{
+            //console.log(resultData.length)
+            console.log( resultData )
+            //props.onGotData()
+            //setAllData(resultData)
+            return resultData;
+        })
+        .catch(error=>console.log('ERROR:',error))
+    });
+}
+
 export default PhotosList

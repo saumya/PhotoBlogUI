@@ -3,6 +3,6 @@ import SaumyaApp from './SaumyaApp'
 
 test('<SaumyaApp> Rendering', () => {
     render(<SaumyaApp />);
-    const linkElement = screen.getByText(/The photo life/i);
-    expect(linkElement).toBeInTheDocument();
+    const subtitleElement = screen.getByText(/The photo life/i);
+    expect(subtitleElement).toBeInTheDocument();
 })

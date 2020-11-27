@@ -5,22 +5,7 @@ import { getApplicationData } from './Utils'
 function PhotosList(props){
     
     const [allData, setAllData] = useState([])
-    /*
-    const getDataFromServer = ()=>{
-        const url_photos = 'minstagram_uploads/data.json';
-        fetch( url_photos, { method: 'GET' } )
-        .then(result => {
-            result.json()
-            .then(resultData=>{
-                //console.log(resultData.length)
-                console.log( allData )
-                props.onGotData()
-                setAllData(resultData)
-            })
-            .catch(error=>console.log('ERROR:',error))
-        });
-    }
-    */
+    
     useEffect(()=>{
         console.log('PhotosList : 1');
         const onData = data=>{ 
@@ -29,10 +14,6 @@ function PhotosList(props){
             setAllData(data)
         }
         const photosData = getApplicationData(onData);
-        //console.log( 'photosData', photosData );
-        //if(photosData.length>0){
-        //props.onGotData()
-        //}
     },[]);
     //
     return(

@@ -10,7 +10,7 @@ function PhotosList(props){
     const [allData, setAllData] = useState([])
     
     useEffect(()=>{
-        console.log('PhotosList : 1');
+        //console.log('PhotosList : 1');
         const onData = data=>{ 
             console.log('onData', data) 
             props.onGotData()

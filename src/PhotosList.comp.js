@@ -1,6 +1,9 @@
 //
 import React, { useEffect, useState } from 'react'
+
 import { getApplicationData } from './Utils'
+import PhotoComp from './Photo.comp'
+
 
 function PhotosList(props){
     
@@ -18,10 +21,9 @@ function PhotosList(props){
     //
     return(
         <React.Fragment>
-            <div className="subtitle"> List of Data </div>
             {
                 allData.map( (item, index)=>(
-                    <div key={index}> {index}-{item.file} </div>
+                    <PhotoComp key={index} imgPath={item.file} />
                 ))
             }
         </React.Fragment>
